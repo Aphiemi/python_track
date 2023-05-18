@@ -1,0 +1,13 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    a = -101 
+    b = -101
+    for x in arr: 
+        if x > a :
+            b = a 
+            a = x
+        elif x < a and x > b:
+            b = x
+    print(b)             
+    
