@@ -1,0 +1,19 @@
+if __name__ == '__main__':
+    rec = []
+    rec1 = []
+    a = b = 100 
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        if score < a: 
+            b = a
+            a = score
+        elif score > a and score < b:
+            b = score
+        rec1 = [name, score]
+        rec.append(rec1)
+        rec.sort()
+    for i in range(len(rec)):
+        if rec[i][1] == b:
+            print(rec[i][0])
+            rec1.append(rec[i])
